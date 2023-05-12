@@ -1,0 +1,2 @@
+Requests==2.30.0
+webvtt_py==0.4.6
