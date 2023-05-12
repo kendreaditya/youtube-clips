@@ -20,7 +20,7 @@
 ## File Structure
 
 The repository has the following file structure:
-
+```
 ├── export-markdown
 │ ├── clipTranscript.py
 │ └── utils.py
@@ -32,7 +32,7 @@ The repository has the following file structure:
 │ ├── icon16.png
 │ └── icon48.png
 └── manifest.json
-
+```
 - The `export-markdown` directory contains the Python scripts for extracting clip information and generating markdown files.
 - The `export-youtube-clips` directory contains the chrome extentsion's JavaScript files responsible for adding checkboxes to YouTube video thumbnails and exporting clips to markdown.
 
