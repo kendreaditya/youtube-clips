@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Export YouTube Clips",
+  "version": "1.0",
+  "description": "A Chrome extension that allows you to easily extract YouTube clips and grab their urls.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/feed/clips"
+      ],
+      "js": [
+        "clipCheckboxes.js",
+        "export.js"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}
+
