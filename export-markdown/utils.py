@@ -130,7 +130,7 @@ class Video:
 
         return ' '.join(transcript).replace('\n', ' ').strip()
 
-    def render_markdown(self, directory=None):
+    def render_markdown(self, directory=None, transcript_exists=True):
         safe_file_name = re.sub(r'[^\w\d-]', '_', self.video_name)
         file_name = f"{safe_file_name}.md" if directory is None else os.path.join(directory, f"{safe_file_name}.md")
 
@@ -139,4 +139,5 @@ class Video:
             f.write(f"- [{self.video_name}]({self.url})\n\n")
             for clip in self.clips:
                 f.write(f"\t- [{clip.clip_name}]({clip.url})\n")
-                f.write(f"\t\t- {clip.transcript}\n\n")
+                if transcript_exists: 
+                    f.write(f"\t\t- {clip.transcript}\n\n")
